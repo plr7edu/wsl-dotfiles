@@ -99,6 +99,10 @@ alias ll='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a | egrep "^\."'
 
+#Direcoty
+alias dot='cd wsl-dotfiles'
+alias bin='cd .local/bin'
+
 #Git
 alias clone='git clone'
 alias commit='git commit -m'
