@@ -92,6 +92,9 @@ fi
 #alias la='ls -A'
 #alias l='ls -CF'
 
+#scripts
+alias gitp='gitp *'
+
 #Applications
 alias m='micro'
 
