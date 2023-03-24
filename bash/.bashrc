@@ -92,6 +92,9 @@ fi
 #alias la='ls -A'
 #alias l='ls -CF'
 
+#Applications
+alias m='micro'
+
 #Changing "ls" to "exa"
 alias ls='exa -al --color=always --group-directories-first' # my preferred listing
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs
