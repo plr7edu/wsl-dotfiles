@@ -92,24 +92,39 @@ fi
 #alias la='ls -A'
 #alias l='ls -CF'
 
-#scripts
+
+### ALIASES ###
+
+# .bashrc
+alias bashrc='micro ~/.bashrc'
+
+# Package Manager  ---------------------------------------------------------------------------------
+
+# nala
+alias ns='nala show'
+
+# apt
+alias update="sudo apt update && sudo apt upgrade -y"
+# --------------------------------------------------------------------------------------------------
+
+# scripts
 alias gitp='gitp *'
 
-#Applications
+# applications
 alias m='micro'
 
-#Changing "ls" to "exa"
+# changing "ls" to "exa"
 alias ls='exa -al --color=always --group-directories-first' # my preferred listing
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs
 alias ll='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a | egrep "^\."'
 
-#Direcoty
+# directory
 alias dot='cd wsl-dotfiles'
 alias bin='cd .local/bin'
 
-#Git
+# git
 alias clone='git clone'
 alias commit='git commit -m'
 alias pull='git pull origin'
@@ -125,7 +140,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-alias update="sudo apt update && sudo apt upgrade -y"
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -142,8 +156,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# ~/.bashrc
-
+# statship prompt
 eval "$(starship init bash)"
 
-
+# autojump
+. /usr/share/autojump/autojump.sh
