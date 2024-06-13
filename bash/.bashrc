@@ -92,6 +92,8 @@ fi
 #alias la='ls -A'
 #alias l='ls -CF'
 
+# PATH
+export PATH=".local/bin:$PATH"
 
 ### ALIASES ###
 
@@ -157,7 +159,10 @@ if ! shopt -oq posix; then
 fi
 
 # statship prompt
-eval "$(starship init bash)"
+#eval "$(starship init bash)"
 
 # autojump
-. /usr/share/autojump/autojump.sh
+#. /usr/share/autojump/autojump.sh
+
+# zoxide 
+eval "$(zoxide init bash)"
